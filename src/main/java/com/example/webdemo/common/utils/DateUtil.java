@@ -1,4 +1,4 @@
-package com.example.webdemo.common;//
+package com.example.webdemo.common.utils;//
 //                            _ooOoo_
 //                           o8888888o
 //                           88" . "88
