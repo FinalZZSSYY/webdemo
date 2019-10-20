@@ -1,0 +1,33 @@
+# \u4FEE\u6539\u8BBF\u95EE\u7AEF\u53E3
+server:
+  port: 9002
+  servlet:
+    context-path: /webdemo
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: password
+    #\u914D\u7F6E\u6570\u636E\u6E90
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+#  mvc:
+#    static-path-pattern: /static/**
+
+
+mybatis:
+  #mybatis\u914D\u7F6E\u6570\u636E\u5E93\u4E2D\u4E0B\u5212\u7EBF\u81EA\u52A8\u8F6C\u4E3A\u9A7C\u5CF0
+  configuration:
+    map-underscore-to-camel-case: true
+  # \u5B9A\u4E49mapper.xml\u914D\u7F6E\u6587\u4EF6\u4F4D\u7F6E
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.example.webdemo.pojo
